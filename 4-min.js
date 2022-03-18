@@ -13,6 +13,14 @@
  */
 
 // Your code here.
+const minArr = (arr) => {
+    let min = arr[0];
+    arr.forEach( el => {
+        if(el < min) min = el;
+    })
+    return min;
+}
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
 //
 // Use these commands to test your code:
 //

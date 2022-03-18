@@ -21,3 +21,19 @@
  */
 
 // Your code here.
+let w = 8, h = 8;
+let string = "";
+let par = false;
+for(let height = 0; height < h; height++){
+    for(let width = 0; width < w; width++){
+        if(width % 2 == par){
+            string+="#";
+        }else {
+            string+=" ";
+        }
+    }
+    string+="\n";
+    par = !par;
+}
+console.log(string)
+
