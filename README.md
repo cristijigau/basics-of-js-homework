@@ -1,4 +1,4 @@
-# homework-introduction-to-js 🌵
+# homework-introduction-to-js
 
 Set of js tasks for homework
 
