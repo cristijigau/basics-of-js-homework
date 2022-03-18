@@ -17,3 +17,10 @@
  */
 
 // Your code here.
+const triangle = (num) => {
+    const repeatingElement = `#`;
+    for (let i = 1; i <= num; i++) {
+        console.log(repeatingElement.repeat(i))
+    }
+}
+triangle(7)

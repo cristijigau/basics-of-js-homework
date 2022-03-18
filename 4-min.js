@@ -15,9 +15,12 @@
 // Your code here.
 //
 // Use these commands to test your code:
-//
-//console.log(min(0, 10));
+const min = (numOne, numTwo) => numOne < numTwo ? numOne : numTwo;
+const minArr = (arr) => arr.sort((a,b) => a-b)[0];
+
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // → -10
-//
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]))
+// → -9

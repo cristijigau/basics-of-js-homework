@@ -21,3 +21,15 @@
  */
 
 // Your code here.
+const chessTable = (num) => {
+    const blackSquareFirst = `# `;
+    const whiteSquareFirst = ` #`;
+    for(let i = 0; i < num; i++) {
+        if(i % 2 === 0) {
+            console.log(blackSquareFirst.repeat(Math.round(num / 2)))
+        } else {
+            console.log(whiteSquareFirst.repeat(Math.round(num / 2)))
+        }
+    }
+}
+chessTable(8)
