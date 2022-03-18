@@ -26,13 +26,55 @@
 // → 55
 
 
-function createArr(start, end, step = 1) {
-	const arr = []
-
-	for (let i = start; i <= end; i++) {
-		
-	}
-	console.log(arr)
+function range(...arg) {
+	const [ , , step = 0 ] = arg;
+	return step >= 0
+		? isStepPositive(arg)
+		: isStepNegative(arg)
 }
 
-createArr(5, 15)
+function isStepPositive(argArr) {
+	let [ start, end, step = 0 ] = argArr;
+	const arr = []
+	start > end && (start = argArr[1], end = argArr[0])
+
+	step === 1 || step === 0 
+		? step = 0
+		: arr.push(start)
+
+	for (let i = start, index = 0; i <= end; i++) {
+		index > step - 1
+			? (arr.push(i), index = 1)
+			: ++index
+	}
+	return arr
+}
+function isStepNegative(argArr) {
+	let [ start, end, step = 0 ] = argArr;
+	const arr = []
+	start > end && (start = argArr[1], end = argArr[0])
+
+	step === -1
+		? (step = 0)
+		: arr.push(end)
+
+	for (let i = end, index = 0; i >= start; i--) {
+		index <= step
+			? (arr.push(i), index = -1)
+			: --index
+	}
+	return arr
+}
+
+function sum(arr) {
+	let sum = 0 
+	for (let i = 0; i < arr.length; i++ ) {
+		sum += arr[i]
+	}
+	return sum
+}
+
+const test = [1, -10, -2] //also work with negative [start / end]
+
+console.log(range(...test))
+console.log(sum(range(...test)))

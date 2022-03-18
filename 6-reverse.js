@@ -1,4 +1,4 @@
-/**
+ /**
  * REVERSE
  *
  * to run code from this file use: npx nodemon 6-reverse
@@ -12,3 +12,16 @@
 
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+
+function reverseArray(arr) {
+	const reverseArr = []
+	const length = arr.length - 1
+
+	for (let i = length; i >= 0; i-- ) {
+		reverseArr.push(arr[i])
+	}
+
+	return reverseArr
+}
+
+console.log(reverseArray(["A", "B", "C"]))

@@ -18,7 +18,7 @@
 
 // Your code here.
 
-function createTriangle(row) {
+function createTriangle(row = 8) {
 	const char = '#'
 	for (let i = 0; i < row; i++) {
 		for (let j = 0; j <= i; j++) {
@@ -28,4 +28,4 @@ function createTriangle(row) {
 	}
 }
 
-createTriangle(8)
+createTriangle()
