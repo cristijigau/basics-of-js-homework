@@ -21,3 +21,34 @@
  */
 
 // Your code here.
+
+const createChessboard = (size = 8) => {
+  const chessBoard = []
+  for (let i = 1; i < (size + 1); i++) {
+    i % 2 
+      ? chessBoard.push(createOddRow(size))
+      : chessBoard.push(createEvenRow(size))
+  }
+  console.log(chessBoard.join('\n'))
+}
+
+function createOddRow(lengthRow) {
+  const row = []
+  for (let i = 0; i < lengthRow; i++) {
+    i % 2 
+      ? row.push(' ')
+      : row.push('#')
+  }
+  return row.join('')
+}
+function createEvenRow(lengthRow) {
+ const row = []
+  for (let i = 0; i < lengthRow; i++) {
+    i % 2 
+      ? row.push('#')
+      : row.push(' ')
+  }
+  return row.join('')
+}
+
+createChessboard(6)

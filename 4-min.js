@@ -21,3 +21,23 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+
+
+// function getMin(...args) {
+// 	args = args.sort((a,b) => a - b)
+// 	console.log(args[0])
+// }
+
+// getMin(0, -50)
+
+function  getMinNotSoFast(...args) {
+	for (let i = 0; i < args.length; i++) {
+		for (let j = 0; j < args.length - i - 1; j++) {
+			args[j + 1] < args[j] && ([args[j + 1], args[j]] = [args[j], args[j + 1]])  
+		}
+	}
+	console.log(args[0])
+}
+
+getMinNotSoFast(9784, -848, -848.5, 151, -1.5, 855, 0)

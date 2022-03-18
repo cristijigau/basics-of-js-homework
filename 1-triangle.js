@@ -17,3 +17,15 @@
  */
 
 // Your code here.
+
+function createTriangle(row) {
+	const char = '#'
+	for (let i = 0; i < row; i++) {
+		for (let j = 0; j <= i; j++) {
+			const line = Array(j).fill(char)
+			console.log(line.join(''))
+		}
+	}
+}
+
+createTriangle(8)

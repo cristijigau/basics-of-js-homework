@@ -15,6 +15,7 @@
  *
  */
 
+
 // Your code here.
 //
 // console.log(range(1, 10));
@@ -23,3 +24,15 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+
+function createArr(start, end, step = 1) {
+	const arr = []
+
+	for (let i = start; i <= end; i++) {
+		
+	}
+	console.log(arr)
+}
+
+createArr(5, 15)
