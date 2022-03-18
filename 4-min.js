@@ -13,7 +13,24 @@
  */
 
 // Your code here.
-//
+const min = (a,b) => {{
+
+         return a<b ? a : b;
+     }
+}
+
+console.log(min(20, 2));
+let arr = [2, 4, -4, 10, 0, -9, 17];
+
+
+const minArr =(arr)=>{
+
+    console.log(arr)
+}
+
+console.log(minArr(arr));
+
+
 // Use these commands to test your code:
 //
 //console.log(min(0, 10));
