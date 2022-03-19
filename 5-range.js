@@ -16,10 +16,48 @@
  */
 
 // Your code here.
-//
-// console.log(range(1, 10));
+const range = (numOne, numTwo, step = 1) => {
+    let arr = [];
+    if(numOne < numTwo) {
+        if(step > 0) {
+            for (let i = numOne; i <= numTwo; i += step) {
+                arr.push(i)
+            }
+        }
+        else {
+            for (let i = numTwo; i >= numOne; i += step) {
+                arr.push(i)
+            }
+        }
+    } else {
+        if(step > 0) {
+            for (let i = numTwo; i <= numOne; i += step) {
+                arr.push(i)
+            }
+        }
+        else {
+            for (let i = numOne; i >= numTwo; i += step) {
+                arr.push(i)
+            }
+        }
+    }
+    return arr
+}
+
+// const sum = (arr) => arr.reduce((sum, current) => sum += current, 0)
+
+const sum = (arr) => {
+    let sum = 0;
+    for( let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum
+}
+
+console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// console.log(range(5, 2, -1));
+console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
-// console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10)));
 // → 55
+console.log(range(1, -10, 1))
