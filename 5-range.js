@@ -23,3 +23,33 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+function range(x,y, z=1){
+    let arr = [];
+    if(x>y){
+        if(z>0){
+            return '3rd argument must be negative';
+        }
+        for(let i=x; i>=y; i+=z){
+            arr.push(i);
+        }
+    }else{
+        if(z<0){
+            return '3rd argument must be positive'
+        }
+        for(let i=x;  i<=y; i+=z){
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+
+const sum = (arr) =>{
+let summ = 0;
+    for(let j of arr){
+        summ+=j;
+    }
+    return summ; 
+}
+
+console.log(range(1,5, -1));

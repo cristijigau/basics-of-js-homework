@@ -17,3 +17,25 @@
  */
 
 // Your code here.
+
+let x = '#';
+while(x.length<8){
+    console.log(x);
+    x +='#';
+}
+ 
+//2nd Variant
+// let x = '#';
+// for(let i = 1; i<8; i++){
+//     console.log(x);
+//     x+ ='#';
+// }
+
+
+
+
+
+
+
+
+

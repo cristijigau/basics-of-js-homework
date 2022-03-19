@@ -21,3 +21,31 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+
+//4.1
+const min = (a, b) =>{
+    if(a>b){
+        return b
+    }else return a
+}
+
+console.log(min(1,8));
+
+
+//4.2
+// const array = [1,-2, -3, 3,4,-33, -1234,5];
+
+// const min = (arr) =>{
+//     let min=arr[0];
+//     for( let i = 1; i<arr.length; i++){
+//       if(min>arr[i]){
+//         min=arr[i];
+//       }
+//     }
+//     return min;
+// }
+
+// console.log(min(array));
+
+

@@ -12,3 +12,14 @@
 
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+
+const array = ['a', 'b', 'c'];
+const reverse = (arr) =>{
+    let internalArray = [];
+    for(let i = arr.length-1; i>=0; i--){
+        internalArray.push(arr[i])
+    }
+    return internalArray;
+}
+
+console.log(reverse(array));
