@@ -23,9 +23,30 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
-const range = (start,end) => {
+const range = (start,end,ind) => {
 let a = [];
-a.splice(start,end)
+
+if(ind === undefined || ind >= 0){
+    ind = 1
+}else if(ind<=0){
+    ind =-1;
+} 
+
+const counter = Math.abs(((end-start)/ind)+1)
+
+for(let i=0;i<counter; i++){
+    a.push(start);
+    start += ind;
+}
 return a;
 }
-console.log(range(1,10,));
+
+const sum = (array)=>{
+    let sumaizer = array;
+   const change = sumaizer.reduce((fElem,sElem)=>fElem+sElem);
+    return change;
+}
+
+console.log(range(1,10));
+console.log(sum(range(1,20)))
+

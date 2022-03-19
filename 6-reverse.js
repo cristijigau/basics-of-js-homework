@@ -9,6 +9,10 @@
  */
 
 // Your code here.
-
+const reverseArray = (array) => {
+            let newArray = array.map(array.pop,[...array])
+            return newArray;
+}
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+console.log(reverseArray([1,2,3,4,5,6]));
