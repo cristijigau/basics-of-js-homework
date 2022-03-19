@@ -13,6 +13,25 @@
  */
 
 // Your code here.
+
+//4.1
+
+const min = (x, y) => (x > y ? x : y);
+
+console.log(min(3, -7));
+
+//4.2
+
+const Min = (arr) => {
+  let minElement = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] < minElement && (minElement = arr[i]);
+  }
+  return minElement;
+};
+
+console.log(Min([2, 4, -4, 10, 0, -9, 17]));
+
 //
 // Use these commands to test your code:
 //
