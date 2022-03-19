@@ -25,56 +25,53 @@
 // console.log(sum(range(1, 10)));
 // → 55
 
-
+const test = [1, -10, 2] //also works with negative [start / end]
+// ===================================================================
 function range(...arg) {
-	const [ , , step = 0 ] = arg;
-	return step >= 0
-		? isStepPositive(arg)
-		: isStepNegative(arg)
+	let [start, end, step = 0] = arg
+	start > end && (start = arg[1], end = arg[0])
+
+	return step === 0 || step === 1 
+		? fillArray(start, end)
+		: filterArr(fillArray(start, end), step)
 }
 
-function isStepPositive(argArr) {
-	let [ start, end, step = 0 ] = argArr;
-	const arr = []
-	start > end && (start = argArr[1], end = argArr[0])
-
-	step === 1 || step === 0 
-		? step = 0
-		: arr.push(start)
-
-	for (let i = start, index = 0; i <= end; i++) {
-		index > step - 1
-			? (arr.push(i), index = 1)
-			: ++index
-	}
-	return arr
-}
-function isStepNegative(argArr) {
-	let [ start, end, step = 0 ] = argArr;
-	const arr = []
-	start > end && (start = argArr[1], end = argArr[0])
-
-	step === -1
-		? (step = 0)
-		: arr.push(end)
-
-	for (let i = end, index = 0; i >= start; i--) {
-		index <= step
-			? (arr.push(i), index = -1)
-			: --index
+function fillArray(start, end, arr = []) {
+	for (let i = start; i <= end; i++) {
+		arr.push(i)
 	}
 	return arr
 }
 
-function sum(arr) {
-	let sum = 0 
+function filterArr(...args) {
+	const  [arr, step] = args
+	let stepIndex = 0
+	let filteredArr = []
+
+	if (step > 0) {
+		for (let i = 0; i < arr.length; i++) {
+			i === 0 && filteredArr.push(arr[i])
+			stepIndex !== step
+				?	stepIndex++
+				: (filteredArr.push(arr[i]), stepIndex = 0)
+		}
+	} else {
+		for (let i = arr.length - 1 ; i >= 0; i--) {
+			i === arr.length - 1 && filteredArr.push(arr[i])
+			stepIndex > step
+				?	stepIndex--
+				: (filteredArr.push(arr[i]), stepIndex = 0)
+		}
+	}
+	return filteredArr
+}
+
+function sum(arr, sum = 0) {
 	for (let i = 0; i < arr.length; i++ ) {
 		sum += arr[i]
 	}
 	return sum
 }
-
-const test = [1, -10, -2] //also work with negative [start / end]
 
 console.log(range(...test))
 console.log(sum(range(...test)))
