@@ -19,19 +19,31 @@
 const range = (numOne, numTwo, step = 1) => {
     let arr = [];
     if(numOne < numTwo) {
-        for (let i = numOne; i <= numTwo; i += step) {
-            arr.push(i)
-    }} else {
         if(step > 0) {
-            for (let i = numOne; i >= numTwo; i -= step) {
+            for (let i = numOne; i <= numTwo; i += step) {
                 arr.push(i)
-        }} else {
+            }
+        }
+        else {
+            for (let i = numTwo; i >= numOne; i += step) {
+                arr.push(i)
+            }
+        }
+    } else {
+        if(step > 0) {
+            for (let i = numTwo; i <= numOne; i += step) {
+                arr.push(i)
+            }
+        }
+        else {
             for (let i = numOne; i >= numTwo; i += step) {
                 arr.push(i)
+            }
         }
-    }}
+    }
     return arr
 }
+
 // const sum = (arr) => arr.reduce((sum, current) => sum += current, 0)
 
 const sum = (arr) => {
@@ -48,3 +60,4 @@ console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 console.log(sum(range(1, 10)));
 // → 55
+console.log(range(1, -10, 1))
