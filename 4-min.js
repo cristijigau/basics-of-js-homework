@@ -13,22 +13,15 @@
  */
 
 // Your code here.
-const min = (a,b) => {{
+const min = (a,b) => a<b ? a : b;
 
-         return a<b ? a : b;
-     }
+const minArr = (arr) => {
+ console.log(arr.reduce((fElem,sElem)=>fElem<sElem?fElem:sElem))
 }
-
+        
+minArr([2, 4, -4, 10, 0, -10, 17]);
 console.log(min(20, 2));
-let arr = [2, 4, -4, 10, 0, -9, 17];
 
-
-const minArr =(arr)=>{
-
-    console.log(arr)
-}
-
-console.log(minArr(arr));
 
 
 // Use these commands to test your code:

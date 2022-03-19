@@ -23,3 +23,9 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+const range = (start,end) => {
+let a = [];
+a.splice(start,end)
+return a;
+}
+console.log(range(1,10,));

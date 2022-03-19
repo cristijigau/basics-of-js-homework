@@ -33,4 +33,4 @@ let chessboard = (width,height)=>{
 
 }
 
-chessboard(5,8);
+chessboard(8,8);
