@@ -12,4 +12,14 @@
  *
  */
 
-// Your code here.
+//Your code here.
+const fizzBuxx = () =>{
+    for(let i=1; i<101; i++){
+        let tempStr='';
+        if(i%3===0) tempStr+='Fizz';
+        if(i%5===0) tempStr+='Buzz';
+        tempStr ? console.log(tempStr):console.log(i);
+    }
+}
+
+fizzBuxx();
