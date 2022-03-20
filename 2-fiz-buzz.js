@@ -13,3 +13,35 @@
  */
 
 // Your code here.
+// let i = 0;
+// do{
+//     let divisibleByThree = i%3;
+//     let divisibleByFive = i%5;
+//     if(divisibleByThree ===0 && divisibleByFive === 0){
+//         console.log('FizzBuzz')
+//     } else if(divisibleByThree === 0){
+//         console.log('Fizz')
+//     } else if(divisibleByFive === 0) {
+//         console.log('Buzz')
+//     }else{console.log(i)}
+    
+
+   
+//     i++
+// }
+// while (i < 100);
+
+
+
+    for(i=0;i<=100; i++){
+        let divisibleByThree = i%3;
+        let divisibleByFive = i%5;
+    if(divisibleByThree ===0 && divisibleByFive === 0){
+                console.log('FizzBuzz')
+            } else if(divisibleByThree === 0){
+                console.log('Fizz')
+            } else if(divisibleByFive === 0) {
+                console.log('Buzz')
+            }else{console.log(i)}
+            
+}

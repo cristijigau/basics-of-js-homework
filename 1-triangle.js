@@ -6,7 +6,7 @@
  * Write a loop that makes seven calls to console.log to output the following triangle:
  #
  ##
- ###
+ ##
  ####
  #####
  ######
@@ -17,3 +17,11 @@
  */
 
 // Your code here.
+let square = '#';
+
+for(let i = 0; i<7;i++){
+ let result = square.padEnd(i,'#');
+   console.log(result);
+};
+
+
