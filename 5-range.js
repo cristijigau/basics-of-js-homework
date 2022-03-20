@@ -73,7 +73,7 @@ const rangeModified = (start, end, step) => {
   return arr;
 };
 
-console.log(rangeModified(5, 3));
+console.log(rangeModified(5, 2, -1));
 
 //
 // console.log(range(1, 10));
