@@ -17,3 +17,13 @@
  */
 
 // Your code here.
+
+const drawTriangle = (n, symbol) => {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    str += symbol;
+    console.log(str);
+  }
+};
+
+drawTriangle(7, "#");
