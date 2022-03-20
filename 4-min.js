@@ -16,9 +16,9 @@
 
 //4.1
 
-const min = (x, y) => (x > y ? x : y);
+const min = (x, y) => (x > y ? y : x);
 
-console.log(min(3, -7));
+console.log(min(3, -10));
 
 //4.2
 
