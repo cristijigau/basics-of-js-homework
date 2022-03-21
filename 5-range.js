@@ -32,6 +32,7 @@ function range(start, end, step){
 
     step = (typeof step !== 'undefined') ? step : 1;
     step < 0 ? step *= -1 : step;
+    step === 0 ? step = 1 : step;
 
     if(primaryStart < primaryEnd){
         for(let i = 0; start <= end; i++){
