@@ -48,10 +48,7 @@ function filterArr(...args) {
 	const direction = step > 0
 
 	for (let i = direction ? 0 : arr.length - 1; direction ? i < arr.length : i > 0; i = i + step ) {
-
-		if (i < arr.length) {
-			filteredArr.push(arr[i])
-		}
+		filteredArr.push(arr[i])
 	}
 	return filteredArr
 }
@@ -63,6 +60,6 @@ function sum(arr, sum = 0) {
 	return sum
 }
 
-const test = [10, -90, -3] //also works with negative [start / end]
+const test = [10, -90, 3] //also works with negative [start / end]
 console.log(range(...test))
 console.log(sum(range(...test)))
