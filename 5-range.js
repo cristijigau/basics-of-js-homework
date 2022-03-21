@@ -27,39 +27,45 @@
 
 // ===================================================================
 function range(...arg) {
-	let [start, end, step = 0] = arg
+	let [start, end, step = 1] = arg
 	start > end && (start = arg[1], end = arg[0])
 
-	return step === 0 || step === 1 
-		? fillArray(start, end)
-		: filterArr(fillArray(start, end), step)
+	return step === 1 
+		? createArray(start, end)
+		: filterArr(createArray(start, end), step)
 }
 
-function fillArray(start, end, arr = []) {
+function createArray(start, end) {
+	const arr = []
 	for (let i = start; i <= end; i++) {
 		arr.push(i)
 	}
 	return arr
 }
 
-function filterArr(...args) {
-	const  [arr, step] = args
+function filterArr(arr, step) {
 	const filteredArr = []
 	const direction = step > 0
 
-	for (let i = direction ? 0 : arr.length - 1; direction ? i < arr.length : i > 0; i = i + step ) {
+	const index = direction ? 0 : arr.length - 1
+	const condition = (i) => direction 
+		? i < arr.length 
+		: i > 0
+
+	for (let i = index; condition(i); i = i + step) {
 		filteredArr.push(arr[i])
 	}
 	return filteredArr
 }
 
-function sum(arr, sum = 0) {
+function sum(arr) {
+	let sum = 0
 	for (let i = 0; i < arr.length; i++ ) {
 		sum += arr[i]
 	}
 	return sum
 }
 
-const test = [10, -90, 3] //also works with negative [start / end]
+const test = [10, -40, 3] //also works with negative [start / end]
 console.log(range(...test))
 console.log(sum(range(...test)))

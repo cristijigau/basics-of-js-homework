@@ -37,7 +37,8 @@ const createChessboard = (size = 8) => {
   console.log(chessBoard.join('\n'))
 }
 
-function createRow(lengthRow, isEven = true, row = []) {
+function createRow(lengthRow, isEven = true) {
+  const row = []
   for (let i = 0; i < lengthRow; i++) {
     i % 2
       ? row.push(isEven ? ' ' : '#')
@@ -47,6 +48,5 @@ function createRow(lengthRow, isEven = true, row = []) {
 }
 const createEvenRow = (size) => createRow(size)
 const createOddRow = (size) => createRow(size, false)
-createChessboard(8)
 
-createRow(5, null, [23, 4])
+createChessboard(8)
