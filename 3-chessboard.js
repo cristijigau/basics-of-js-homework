@@ -24,29 +24,18 @@
 
 const createChessboard = (size = 8) => {
   const chessBoard = []
-  for (let i = 1; i < (size + 1); i++) {
-    i % 2 
-      ? chessBoard.push(createOddRow(size))
-      : chessBoard.push(createEvenRow(size))
+  for (let i = 1; i <= size; i++) {
+    const isEven = Boolean(i % 2)
+    chessBoard.push(createRow(size, isEven))
   }
   console.log(chessBoard.join('\n'))
 }
 
-function createOddRow(lengthRow) {
-  const row = []
+function createRow(lengthRow, isEven, row = []) {
   for (let i = 0; i < lengthRow; i++) {
-    i % 2 
-      ? row.push(' ')
-      : row.push('#')
-  }
-  return row.join('')
-}
-function createEvenRow(lengthRow) {
- const row = []
-  for (let i = 0; i < lengthRow; i++) {
-    i % 2 
-      ? row.push('#')
-      : row.push(' ')
+    i % 2
+      ? row.push(isEven ? ' ' : '#')
+      : row.push(isEven ? '#' : ' ') 
   }
   return row.join('')
 }

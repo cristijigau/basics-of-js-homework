@@ -13,19 +13,25 @@
  */
 
 // Your code here.
-const MAX_NUM = 100
 
-function fizzBuzzThis(i) {
-	!Boolean(i % 3) && !Boolean(i % 5)
-		? console.log('FizzBuzz', i)
-		: !Boolean(i % 3)
-		? console.log('Fizz', i)
-		: !Boolean(i % 5)
-		? console.log('Buzz', i)
-		: console.log(i)
+function FizzBuzz(num) {
+	for (let i = 0; i <= num; i++) {
+
+		switch (true) {
+			case (!Boolean(i % 3) && !Boolean(i % 5)): 
+				console.log('FizzBuzz', i)
+				break
+			case (!Boolean(i % 3)):
+				console.log('Fizz', i)
+				break
+			case(!Boolean(i % 5)): 
+				console.log('Buzz', i)
+				break
+			default: console.log(i)
+		}
+	}
+
 }
 
-for (let i = 0; i <= MAX_NUM; i++) {
-	fizzBuzzThis(i)
-}
+FizzBuzz(100)
 
