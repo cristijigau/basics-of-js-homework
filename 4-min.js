@@ -32,12 +32,18 @@
 // getMin(0, -50)
 
 function  min(...args) {
+	if (args.length === 1 && Array.isArray(args[0]) ) {
+		min(...args[0])
+		return
+	}
+
 	for (let i = 0; i < args.length; i++) {
 		for (let j = 0; j < args.length - i - 1; j++) {
-			args[j + 1] < args[j] && ([args[j + 1], args[j]] = [args[j], args[j + 1]])  
+			args[j + 1] < args[j] && ([args[j + 1], args[j]] = [args[j], args[j + 1]])
 		}
 	}
 	console.log(args[0])
 }
 
 min(9784, -848, -848.5, 151, -1.5, 855, 0)
+min([9784, -848, -848.5, 151, -1.5, 855, 0])

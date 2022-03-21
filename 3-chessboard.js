@@ -26,12 +26,18 @@ const createChessboard = (size = 8) => {
   const chessBoard = []
   for (let i = 1; i <= size; i++) {
     const isEven = Boolean(i % 2)
-    chessBoard.push(createRow(size, isEven))
+
+    if (isEven) {
+      chessBoard.push(createEvenRow(size))
+    } else {
+      chessBoard.push(createOddRow(size))
+    }
+    // chessBoard.push(createRow(size, isEven))
   }
   console.log(chessBoard.join('\n'))
 }
 
-function createRow(lengthRow, isEven, row = []) {
+function createRow(lengthRow, isEven = true, row = []) {
   for (let i = 0; i < lengthRow; i++) {
     i % 2
       ? row.push(isEven ? ' ' : '#')
@@ -39,5 +45,8 @@ function createRow(lengthRow, isEven, row = []) {
   }
   return row.join('')
 }
+const createEvenRow = (size) => createRow(size)
+const createOddRow = (size) => createRow(size, false)
+createChessboard(8)
 
-createChessboard(6)
+createRow(5, null, [23, 4])

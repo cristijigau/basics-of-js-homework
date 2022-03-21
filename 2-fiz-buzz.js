@@ -17,21 +17,16 @@
 function FizzBuzz(num) {
 	for (let i = 0; i <= num; i++) {
 
-		switch (true) {
-			case (!Boolean(i % 3) && !Boolean(i % 5)): 
-				console.log('FizzBuzz', i)
-				break
-			case (!Boolean(i % 3)):
-				console.log('Fizz', i)
-				break
-			case(!Boolean(i % 5)): 
-				console.log('Buzz', i)
-				break
-			default: console.log(i)
+		if (!Boolean(i % 3) && !Boolean(i % 5)) {
+			console.log('FizzBuzz', i)
+		} else if (!Boolean(i % 3)) {
+			console.log('Fizz', i)
+		} else if (!Boolean(i % 5)) {
+			console.log('Buzz', i)
+		} else {
+			console.log(i)
 		}
 	}
-
 }
 
 FizzBuzz(100)
-
