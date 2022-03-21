@@ -56,6 +56,4 @@ function range (start, end, step) {
     }
     return arr;
 }
-console.log('5.2 | ' + (range(1, 10, 2))); 
-
- 
+console.log('5.2 | ' + (range(1, 10, 2)));
