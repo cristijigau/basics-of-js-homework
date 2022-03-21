@@ -23,3 +23,39 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+function range (start, end){
+    let arr = [];
+    for (let i = start; i <= end; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+console.log('5.1 | ' + range(1, 10));
+
+function sum(arr) {
+    let total = 0;
+    for (let i = 0; i<arr.length; i++) {
+        total += arr[i]; 
+    }
+    return total;
+}
+console.log('5.1.1 | ' + sum(range(1, 10)));
+
+
+function range (start, end, step) { 
+    let arr = [];
+    if (end < start && step < 0) {
+        for (let i = start; i >= end; i += step || -1 ) {
+            arr.push(i);
+        }
+    } else {
+        for (let i = start; i <= end; i += step || 1 ) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+console.log('5.2 | ' + (range(1, 10, 2))); 
+
+ 
