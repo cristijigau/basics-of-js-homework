@@ -45,21 +45,12 @@ function fillArray(start, end, arr = []) {
 function filterArr(...args) {
 	const  [arr, step] = args
 	const filteredArr = []
-	let stepIndex = 0
+	const direction = step > 0
 
-	if (step > 0) {
-		for (let i = 0; i < arr.length; i++) {
-			i === 0 && filteredArr.push(arr[i])
-			stepIndex !== step
-				?	stepIndex = stepIndex + 1
-				: (filteredArr.push(arr[i]), stepIndex = 0)
-		}
-	} else {
-		for (let i = arr.length ; i >= 0; i--) {
-			i === arr.length - 1 && filteredArr.push(arr[i])
-			stepIndex !== step
-				?	stepIndex = stepIndex - 1
-				:	(filteredArr.push(arr[i]), stepIndex = 0)
+	for (let i = direction ? 0 : arr.length - 1; direction ? i < arr.length : i > 0; i = i + step ) {
+
+		if (i < arr.length) {
+			filteredArr.push(arr[i])
 		}
 	}
 	return filteredArr
@@ -72,6 +63,6 @@ function sum(arr, sum = 0) {
 	return sum
 }
 
-const test = [-10, -90, -1] //also works with negative [start / end]
+const test = [10, -90, -3] //also works with negative [start / end]
 console.log(range(...test))
 console.log(sum(range(...test)))
