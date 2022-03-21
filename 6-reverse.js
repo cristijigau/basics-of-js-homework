@@ -12,3 +12,19 @@
 
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+
+function reverseArray(array){
+
+    let revArray = [];
+    let length = array.length-1;
+
+    for(let i = 0; i < array.length; i++){
+
+        revArray[i] = array[length];
+        length--;
+    }
+
+    return revArray;
+}
+
+console.log(reverseArray(["A", "B", "C"]));

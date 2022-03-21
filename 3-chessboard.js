@@ -21,3 +21,20 @@
  */
 
 // Your code here.
+
+let bindingSize = 12;
+
+// let bindingSizeX = 5;
+// let bindingSizeY = 20;
+
+for(let i = 0; i < bindingSize; i++){
+
+    let line = ""
+    
+    for(let j = 0; j < bindingSize; j++){
+
+        line += (i + j + 1) % 2 ? '#' : ' ' 
+    }
+
+    console.log(line);
+}

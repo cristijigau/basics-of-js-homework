@@ -17,3 +17,17 @@
  */
 
 // Your code here.
+
+let callNumber = 7;
+
+for(let i = 0; i < callNumber; i++){
+
+    let call = '';
+
+    for(let j = 0; j <= i; j++){
+
+        call += "#"
+    }
+
+    console.log(call)
+}

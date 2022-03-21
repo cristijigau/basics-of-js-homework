@@ -23,3 +23,50 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+function range(start, end, step){
+
+    let array = [];
+    const primaryStart = start;
+    const primaryEnd = end;
+
+    step = (typeof step !== 'undefined') ? step : 1;
+    step < 0 ? step *= -1 : step;
+
+    if(primaryStart < primaryEnd){
+        for(let i = 0; start <= end; i++){
+            array[i] = start;
+            start += step;
+        }
+    }
+
+    if(primaryStart > primaryEnd){
+        for(let i = 0; end <= start; i++){
+            array[i] = start;
+            start -= step;
+        }
+    }
+
+    if(primaryStart == primaryEnd){
+        array[0] = primaryStart;
+    }
+    
+    return array;
+}
+
+function sum(array){
+    let sumArray = 0;
+    for(let i = 0; i < array.length; i++){
+        sumArray += array[i];
+    }
+
+    return sumArray;
+}
+
+
+//5.1
+console.log(range(1, 10));
+
+//5.2
+console.log(range(5, 2, -1));
+console.log(sum(range(1, 10)));
