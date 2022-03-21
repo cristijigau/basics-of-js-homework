@@ -13,3 +13,40 @@
  */
 
 // Your code here.
+
+
+
+// for(let number = 1; number <= 100; number++){
+//     if(number % 3 == 0 && number % 5 != 0){
+//         console.log("Fizz");
+//     }
+//     else if(number % 5 == 0 && number % 3 != 0){
+//         console.log("Buzz");
+//     }
+//     else if(number % 5 == 0 && number % 3 == 0){
+//         console.log("FizzBuzzz");
+//     }
+//     else{
+//         console.log(number);
+//     }
+// }
+
+for(let number = 1; number <= 100; number++){
+
+    let div3 = number % 3;
+    let div5 = number % 5;
+
+    if(!div3 && div5){
+        console.log("Fizz");
+    }
+    else if(div3 && !div5){
+        console.log("Buzz");
+    }
+    else if(!div3 && !div5){
+        console.log("FizzBuzzz");
+    }
+    else{
+        console.log(number);
+    }
+}
+

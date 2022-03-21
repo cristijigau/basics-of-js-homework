@@ -21,3 +21,32 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+function min(a,b){
+
+    let minElement = 0;
+
+    a > b ? minElement = b : minElement = a;
+
+    return minElement;
+}
+
+function minElement(array){
+
+    let minElement = array[0];
+
+    for(let i = 1; i < array.length; i++){
+        if(array[i] < minElement){
+            minElement = array[i]
+        }
+    }
+
+    return minElement;
+}
+
+// 4.1
+console.log(min(0, 10));
+console.log(min(0, -10));
+
+//4.2
+console.log(minElement([2, 4, -4, 10, 0, -9, 17]));
