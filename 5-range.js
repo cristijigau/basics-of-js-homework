@@ -25,7 +25,7 @@
 // console.log(sum(range(1, 10)));
 // → 55
 
-const test = [1, -10, 2] //also works with negative [start / end]
+const test = [-10, -90, 1] //also works with negative [start / end]
 // ===================================================================
 function range(...arg) {
 	let [start, end, step = 0] = arg
@@ -58,9 +58,9 @@ function filterArr(...args) {
 	} else {
 		for (let i = arr.length - 1 ; i >= 0; i--) {
 			i === arr.length - 1 && filteredArr.push(arr[i])
-			stepIndex > step
+			stepIndex !== step
 				?	stepIndex--
-				: (filteredArr.push(arr[i]), stepIndex = 0)
+				:	(filteredArr.push(arr[i]), stepIndex = 0)
 		}
 	}
 	return filteredArr
