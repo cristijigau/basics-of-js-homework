@@ -24,36 +24,36 @@
 // console.log(sum(range(1, 10)));
 // → 55
 const range = (start,end,ind) => {
-    let a = [];
-    let b = [];
-    let step = ind;
-    if(start < end || ind === undefined && ind >= 0){
-        ind = 1
-    }else if (start > end || ind ===undefined && ind<=0){
-        ind =-1;
-    } 
-    
-    if(step!==undefined && step !== 1 && step !== -1 && step !== 0){
-        if(start<end){for(let i=start;i<=end; i+=step){
-                b.push(i);
-            }
-        }else if(start>end){
-            for(let i=start;i>=end; i+=step){
-                b.push(i);
-            }
-        }else {b.push(start)}
-            console.log(b)
-    }
-    
-    
-    const counter = Math.abs(((end-start)/ind)+1)
-    
-    for(let i=0;i<counter; i++){
-        a.push(start);
-        start += ind;
-    }
-    return a;
-    }
+let a = [];
+let b = [];
+let step = ind;
+if(start < end || ind === undefined && ind >= 0){
+    ind = 1
+}else if (start > end || ind ===undefined && ind<=0){
+    ind =-1;
+} 
+
+if(step!==undefined && step !== 1 && step !== -1 && step !== 0){
+    if(start<end){for(let i=start;i<=end; i+=step){
+            b.push(i);
+        }
+    }else if(start>end){
+        for(let i=start;i>=end; i+=step){
+            b.push(i);
+        }
+    }else {b.push(start)}
+        console.log(b)
+}
+
+
+const counter = Math.abs(((end-start)/ind)+1)
+
+for(let i=0;i<counter; i++){
+    a.push(start);
+    start += ind;
+}
+return a;
+}
 
 
     const sum = (array)=>{
