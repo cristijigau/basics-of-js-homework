@@ -33,15 +33,34 @@
 
 
 
-    for(i=0;i<=100; i++){
-        let divisibleByThree = i%3;
-        let divisibleByFive = i%5;
-    if(divisibleByThree ===0 && divisibleByFive === 0){
-                console.log('FizzBuzz')
-            } else if(divisibleByThree === 0){
-                console.log('Fizz')
-            } else if(divisibleByFive === 0) {
-                console.log('Buzz')
-            }else{console.log(i)}
+//     for(i=0;i<=100; i++){
+//     if(divisibleByThree ===0 && divisibleByFive === 0){
+//                 console.log('FizzBuzz')
+//             } else if(divisibleByThree === 0){
+//                 console.log('Fizz')
+//             } else if(divisibleByFive === 0) {
+//                 console.log('Buzz')
+//             }else{console.log(i)}
             
+// }
+
+
+for(let i=0;i<=100;i++){
+    let divisibleByThree = i%3;
+    let divisibleByFive = i%5;
+
+switch(true){
+    case(divisibleByThree ===0 && divisibleByFive === 0):
+    console.log('FizzBuzz: '+i);
+    break;
+    case(divisibleByThree === 0):
+    console.log('Fizz: '+i);
+    break;
+    case(divisibleByFive === 0):
+    console.log('Buzz: '+i);
+    break;
+    default:
+        console.log(i);
+        break
+}
 }

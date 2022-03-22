@@ -21,16 +21,33 @@
  */
 
 // Your code here.
-let square = `#`;
-let upsquare =` #`;
+
+// let chessboard = (width,height)=>{
+// let upsquare = '#'
+// let square = ' #'
+//     for(i=0;i<height;i++){
+//         if(i%2 === 0){
+//             console.log(upsquare.padEnd(width, ` #`));
+//         }else {console.log(square.padEnd(width, ` #`))};
+//     }
+
+// }
+
+
 let chessboard = (width,height)=>{
-
-    for(i=0;i<height;i++){
-        if(i%2 === 0){
-            console.log(upsquare.padEnd(width, ` #`));
-        }else {console.log(square.padEnd(width, ` #`))};
+    let content='';
+    
+    for(let i=0; i<height; i++){
+        let lineSquare='';
+        let upsquare='';
+        for(j=0;j<width;j++){
+           content=((i+j)%2 === 0)?lineSquare+=`# `:upsquare+=` #`
+        }
+        console.log(content)
     }
-
+   
+    
 }
 
-chessboard(8,8);
+
+chessboard(3,3);

@@ -17,10 +17,10 @@
  */
 
 // Your code here.
-let square = '#';
 
+let result='';
 for(let i = 0; i<7;i++){
- let result = square.padEnd(i,'#');
+   result+='#'
    console.log(result);
 };
 

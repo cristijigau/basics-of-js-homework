@@ -16,11 +16,15 @@
 const min = (a,b) => a<b ? a : b;
 
 const minArr = (arr) => {
- console.log(arr.reduce((fElem,sElem)=>fElem<sElem?fElem:sElem))
+    let min = arr[0]
+    for(let i=0;i<arr.length-1;i++ ){
+     min<arr[i+1]?min:min=arr[i+1]
+    }
+ console.log(min)
 }
         
 minArr([2, 4, -4, 10, 0, -10, 17]);
-console.log(min(20, 2));
+
 
 
 
