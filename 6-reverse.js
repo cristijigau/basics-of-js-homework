@@ -12,3 +12,11 @@
 
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+
+function reverseArray(array) {
+    let newArray = []
+    for (let i = array.length - 1; i >= 0; i--) {
+        newArray.push(array.pop())
+    }
+    return newArray
+}
