@@ -21,3 +21,13 @@
  */
 
 // Your code here.
+for (let i = 0; i < 8; i++) {
+    let str = ''
+    if (i % 2 !== 0) {
+        str += ' '
+    }
+    for (let j = 0; j < 8; j++) {
+        str += j % 2 === 0 ? '#' : ' '
+    }
+    console.log(str)
+}

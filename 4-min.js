@@ -16,8 +16,20 @@
 //
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+// console.log(min(0, 10));
 // → 0
 // console.log(min(0, -10));
 // → -10
 //
+function min(a, b) {
+    if (b === undefined) {
+        let min = a[0]
+        for (let i = 1; i < a.length; i++) {
+            if (a[i] < min) {
+                min = a[i]
+            }
+        }
+        return min
+    }
+    return a < b ? a : b
+}
