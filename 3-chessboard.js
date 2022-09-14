@@ -34,6 +34,17 @@ const chessboard = function (size) {
   return str;
 };
 
+const chessboardAnyDimensions = function (height, width) {
+  let str = "";
+  for (let i = 0; i < height; i++) {
+    if (i % 2 === 0) {
+      str += `${"".padStart(width, "# ")}\n`;
+    } else {
+      str += `${"".padStart(width, " #")}\n`;
+    }
+  }
+  return str;
+};
+
 console.log(chessboard(8));
-console.log(chessboard(4));
-console.log(chessboard(20));
+console.log(chessboardAnyDimensions(4, 20));
