@@ -48,6 +48,7 @@ const stepRange = function (start, end, step) {
       rangeArr.push(i);
     }
   }
+  if (!step) return rangeArr;
   for (let i = 0; i < rangeArr.length; i++) {
     if ((stepAbs - i) % stepAbs === 0) resultStepArr.push(rangeArr[i]);
   }
@@ -59,6 +60,7 @@ console.log(range(5, 2, -1));
 console.log(sum(range(1, 10)));
 console.log(stepRange(1, 10, 2));
 console.log(stepRange(5, 2, -1));
+console.log(stepRange(1, 10));
 
 //
 // console.log(range(1, 10));
