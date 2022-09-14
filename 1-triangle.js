@@ -17,3 +17,9 @@
  */
 
 // Your code here.
+//creating a variable for code to work with any height
+let height = 8;
+
+for (let i = 1; i <= height; i++) {
+  console.log("#".repeat(i));
+}

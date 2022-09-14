@@ -21,3 +21,40 @@
  */
 
 // Your code here.
+//Static chessboard
+function chessboard() {
+  let board = "";
+  let odd = "# # # #";
+  let even = " # # # #";
+
+  for (let i = 1; i <= 8; i++) {
+    if (i % 2 === 0) {
+      board += even + "\n";
+    } else {
+      board += odd + "\n";
+    }
+  }
+
+  console.log(board);
+}
+
+//Adjustable chessboard
+function adjustableChessboard(width, height) {
+  let board = "";
+  let odd = "# ".repeat(width / 2);
+  let even = " #".repeat(width / 2);
+
+  for (let i = 0; i < height; i++) {
+    if (i % 2 === 0) {
+      board += even + "\n";
+    } else {
+      board += odd + "\n";
+    }
+  }
+
+  console.log(board);
+}
+
+chessboard();
+adjustableChessboard(10, 10);
+adjustableChessboard(30, 30);
