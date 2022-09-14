@@ -17,3 +17,8 @@
  */
 
 // Your code here.
+
+for (let i = 1; i <= 7; i++) {
+  const result = "".padStart(i, "#");
+  console.log(result);
+}
