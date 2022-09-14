@@ -21,3 +21,20 @@
  */
 
 // Your code here.
+(function (width, height){
+    let board = ''
+
+    for(let i = 0; i < height; i++){
+        for(let j = 0; j < width; j++){
+            console.log((i + j) % 2)
+            if((i + j) % 2 == 0){
+                board += " "
+            }else{
+                board += "#"
+            }
+        }
+        board += '\n'
+    }
+    console.log(board)
+})(8, 8)
+
