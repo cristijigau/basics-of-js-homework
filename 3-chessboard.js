@@ -21,3 +21,19 @@
  */
 
 // Your code here.
+
+const chessboard = function (size) {
+  let str = "";
+  for (let i = 0; i < size; i++) {
+    if (i % 2 === 0) {
+      str += `${"".padStart(size, "# ")}\n`;
+    } else {
+      str += `${"".padStart(size, " #")}\n`;
+    }
+  }
+  return str;
+};
+
+console.log(chessboard(8));
+console.log(chessboard(4));
+console.log(chessboard(20));
