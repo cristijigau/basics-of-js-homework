@@ -17,9 +17,21 @@
 
 // Your code here.
 //
-// console.log(range(1, 10));
+function range(start, finish, step = 1) {
+  let numbers = [];
+  for (let i = start; start > finish ? i >= finish : i <= finish; i += step) {
+    numbers.push(i);
+  }
+  return numbers;
+}
+
+function sum(arr) {
+  return arr.reduce((prev, cur) => prev + cur, 0);
+}
+
+console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// console.log(range(5, 2, -1));
+console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
-// console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10)));
 // → 55
