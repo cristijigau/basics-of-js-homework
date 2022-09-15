@@ -10,5 +10,14 @@
 
 // Your code here.
 
-// console.log(reverseArray(["A", "B", "C"]));
+function reverseArray(arr){
+    let reversedArr = [];
+    for(let i = arr.length-1; i>=0; i--){
+        reversedArr.push(arr[i])
+    }
+    return reversedArr;
+};
+
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
+

@@ -13,11 +13,26 @@
  */
 
 // Your code here.
+
+//4.1
+function min(first, second){
+    return first > second ? second : first
+}
+
+//4.2
+function minArr(arr){
+    let min = arr[0];
+    for(let i = 1; i<=arr.length; i++){
+        min > arr[i] ? min=arr[i] : min;
+    }
+    return min
+}
 //
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // → -10
 //
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
