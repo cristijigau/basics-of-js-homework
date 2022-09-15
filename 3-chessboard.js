@@ -21,3 +21,18 @@
  */
 
 // Your code here.
+
+const createChessboard = (width = 8, height = 8) => {
+    let chessboardPattern = "";
+    for (let i = 0; i < height; i++) {
+        for (let j = 0; j < width; j++) {
+            if ((i + j) % 2 === 0) chessboardPattern += "#";
+            else chessboardPattern += " ";
+        }
+        chessboardPattern += "\n";
+    }
+    console.log(chessboardPattern);
+};
+
+createChessboard();
+createChessboard(10, 5);
