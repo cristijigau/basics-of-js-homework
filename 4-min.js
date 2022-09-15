@@ -13,21 +13,11 @@
  */
 
 // Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
 
 //4.1
-function minNum(first, second){
+function min(first, second){
     return first > second ? second : first
 }
-
-console.log(minNum(0, 10));
 
 //4.2
 function minArr(arr){
@@ -37,5 +27,12 @@ function minArr(arr){
     }
     return min
 }
-
+//
+// Use these commands to test your code:
+//
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+//
 console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
