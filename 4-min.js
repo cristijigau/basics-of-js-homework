@@ -21,3 +21,17 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+
+function minNum(first, second){
+    return first > second ? second : first
+}
+
+
+function minNum(arr){
+    let min = arr[0];
+    for(let i = 1; i<=arr.length; i++){
+        min > arr[i] ? min=arr[i] : min ??????continue?
+    }
+    return min
+}
