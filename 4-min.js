@@ -22,16 +22,20 @@
 // → -10
 //
 
-
+//4.1
 function minNum(first, second){
     return first > second ? second : first
 }
 
+console.log(minNum(0, 10));
 
-function minNum(arr){
+//4.2
+function minArr(arr){
     let min = arr[0];
     for(let i = 1; i<=arr.length; i++){
-        min > arr[i] ? min=arr[i] : min ??????continue?
+        min > arr[i] ? min=arr[i] : min;
     }
     return min
 }
+
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
