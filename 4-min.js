@@ -12,12 +12,14 @@
  * Do not use Math.min
  */
 
-// Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
+const min = (arg1, arg2) => arg1 < arg2 ? console.log(arg1) : console.log(arg2)
+
+const minArr = (arr) => {
+    const sortedArray = arr.sort((a, b) => a - b)
+
+    console.log(sortedArray[0])
+    return sortedArray[0]
+}
+
+min(15, -10)
+minArr([0, -10])

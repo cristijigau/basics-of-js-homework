@@ -21,3 +21,20 @@
  */
 
 // Your code here.
+const drawChessboard = (width = 8, height = 8) => {
+    let chessboard = ''
+
+    //Row
+    for(let i = 1; i <= height; i++){
+        //Column
+        for(let j = 1; j <= width; j++){
+            ((i + j) % 2 === 0) ? chessboard += '#' : chessboard += ' '
+        }
+
+        chessboard += '\n'
+    }
+
+    console.log(chessboard)
+}
+
+drawChessboard()
