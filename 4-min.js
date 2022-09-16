@@ -13,7 +13,20 @@
  */
 
 // Your code here.
-//
+// 4.1
+function min(firstNum, secondNum) {
+    return firstNum < secondNum ? firstNum : secondNum
+}
+// 4.2 
+function minArr(arr) {
+    return arr.reduce((oldVal, newVal) => {
+       return oldVal < newVal ? oldVal : newVal
+    })
+}
+
+console.log(min(0, 10))
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]))
+
 // Use these commands to test your code:
 //
 //console.log(min(0, 10));
