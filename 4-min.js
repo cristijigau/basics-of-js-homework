@@ -20,7 +20,7 @@ function min(firstNum, secondNum) {
 // 4.2 
 function minArr(arr) {
     return arr.reduce((oldVal, newVal) => {
-       return oldVal < newVal ? oldVal : newVal
+        return oldVal < newVal ? oldVal : newVal
     })
 }
 
