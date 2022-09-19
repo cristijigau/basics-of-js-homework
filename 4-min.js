@@ -13,11 +13,27 @@
  */
 
 // Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
+//4.1
+function minNum(a, b) {
+  if (a < b) {
+    console.log(a);
+  } else {
+    console.log(b);
+  }
+}
+minNum(0, 10);
+//4.2
+function getMin(array) {
+  let min = array[0];
+  for (let i = 0; i < array.length; i++) {
+    let element = array[i];
+    if (element < min) {
+      min = element;
+    }
+  }
+  return min;
+}
+let array = [25, 50, 75, 56, 11, 50, 7, 9, 12];
+let result = getMin(array);
+console.log("The smallest number is : ", result);
+

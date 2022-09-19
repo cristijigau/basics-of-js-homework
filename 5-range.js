@@ -16,10 +16,33 @@
  */
 
 // Your code here.
-//
-// console.log(range(1, 10));
-// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// console.log(range(5, 2, -1));
-// → [5, 4, 3, 2]
-// console.log(sum(range(1, 10)));
-// → 55
+//5.1
+function rangeOfNumbers(start, end) {
+  let arr = [];
+  for (start; start <= end; start++) {
+    arr.push(start);
+  }
+  return arr;
+}
+let array = rangeOfNumbers(1, 7);
+console.log(array);
+
+function Sum(array) {
+  return array.reduce((acc, curr) => {
+    return acc + curr;
+  });
+}
+console.log(Sum(array));
+
+//5.2
+function range(start, end, step) {
+  var result = [];
+  if (step == undefined) step = 1;
+  numLoops = Math.abs((end - start) / step) + 1;
+  for (var i = 1; i <= numLoops; i++) {
+    result.push(start);
+    start += step;
+  }
+  return result;
+}
+console.log(range(1, 10, 2));
