@@ -21,3 +21,43 @@
  */
 
 // Your code here.
+let width = 11;
+let height = 8;
+res = '';
+
+res = '';
+for(i = 0; i < height; i++){
+    for(j = 0; j < width; j++){
+        if(res[res.length - 1] == '#'){
+            res += ' ';
+        }
+        else if(res[res.length - 1] == ' '){
+            res += '#';
+        }
+        else if (i == 0){
+            res += '#';
+        }
+        else{
+            if(res[res.length - 2] == ' '){
+                if(width % 2 == 0){
+                    res += ' ';
+                }
+                else{
+                    res += '#';
+                }
+            }
+            else if(res[res.length - 2] == '#'){
+                if(width % 2 != 0){
+                    res += ' ';
+                }
+                else{
+                    res += '#';
+                }
+            }
+        }
+    }
+    res += '\n';
+}
+
+console.log(res);
+console.log(1 % 8);

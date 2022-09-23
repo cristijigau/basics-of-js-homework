@@ -13,3 +13,11 @@
  */
 
 // Your code here.
+
+for(i = 1; i < 101; i++){
+    res = '';
+    if(i % 3 == 0) res += 'Fiz';
+    if(i % 5 == 0) res += 'Buzz';
+    if(res == '') res = i;
+    console.log(res);
+}
