@@ -1,3 +1,6 @@
+// NEED FIX
+
+
 /**
  * RANGE
  *
@@ -31,7 +34,7 @@ function sum(array){
     }
     return result
 }
-console.log(sum(range(1, 10)))
+//console.log(sum(range(1, 10)))
 
 //5.2
 function rangeAdvanced(start, end, step = start < end ? 1 : -1){
@@ -56,3 +59,14 @@ console.log(rangeAdvanced(5, 2, -1))
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+// ------------------------------------Feedback------------------------------------
+
+// Very good! Good code readability, great solutions!
+// You've met all the requirements and did the optional part as well.
+
+// There are 2 more cases that could've been handled but they were not mentioned in the requirements so no worries.
+// Just wanted to let you know in case you didn't notice them
+
+// console.log(range(2, 5, -1));
+// console.log(range(5, 2, 1));

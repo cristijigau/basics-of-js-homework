@@ -13,9 +13,9 @@
  */
 
 // Your code here.
+let fizz = i % 3
+let buzz = i % 5
 for (let i = 1; i <= 100; i++) {
-    let fizz = i % 3
-    let buzz = i % 5
     if (fizz == 0 && buzz == 0) {
         console.log("FizzBuzz")
     } else if (fizz == 0) {
