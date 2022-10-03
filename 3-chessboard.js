@@ -21,33 +21,33 @@
  */
 
 // Your code here.
-let width = 11;
+let width = 8;
 let height = 8;
 res = '';
 
 res = '';
 for(i = 0; i < height; i++){
     for(j = 0; j < width; j++){
-        if(res[res.length - 1] == '#'){
+        if(res[res.length - 1] === '#'){
             res += ' ';
         }
-        else if(res[res.length - 1] == ' '){
+        else if(res[res.length - 1] === ' '){
             res += '#';
         }
-        else if (i == 0){
+        else if (i === 0){
             res += '#';
         }
         else{
-            if(res[res.length - 2] == ' '){
-                if(width % 2 == 0){
+            if(res[res.length - 2] === ' '){
+                if(width % 2 === 0){
                     res += ' ';
                 }
                 else{
                     res += '#';
                 }
             }
-            else if(res[res.length - 2] == '#'){
-                if(width % 2 != 0){
+            else if(res[res.length - 2] === '#'){
+                if(width % 2 !== 0){
                     res += ' ';
                 }
                 else{
@@ -56,8 +56,9 @@ for(i = 0; i < height; i++){
             }
         }
     }
-    res += '\n';
+    if(i !== height -1){
+        res += '\n';
+    }
 }
 
 console.log(res);
-console.log(1 % 8);

@@ -16,6 +16,13 @@
  */
 
 // Your code here.
+const range = (start, end) => {
+    const theArr = [];
+    range()
+    for(i = start; i <= end; i++){
+        theArr.push(i);
+    }
+}
 //
 // console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
