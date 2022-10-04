@@ -21,11 +21,11 @@
  */
 
 // Your code here.
+    //specify rows and lines using width and height
 let width = 8;
 let height = 8;
 res = '';
 
-res = '';
 for(i = 0; i < height; i++){
     for(j = 0; j < width; j++){
         if(res[res.length - 1] === '#'){
