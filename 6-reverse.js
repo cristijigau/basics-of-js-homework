@@ -9,8 +9,15 @@
  */
 
 // Your code here.
+const sourceArray = ['A', 'B', 'C'];
 
-// console.log(reverseArray(["A", "B", "C"]));
+const reverseArray = (array) =>{
+    reversed = [];
+    while(array.length > 0){
+        reversed.push(array.pop());
+    }
+    return reversed;
+}
+
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
-
-'use st'
