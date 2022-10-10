@@ -17,3 +17,11 @@
  */
 
 // Your code here.
+
+for(i = 1; i < 8; i++){
+    res = '';
+    for(j = 0; j < i; j++){
+        res += '#';
+    }
+    console.log(res);
+}

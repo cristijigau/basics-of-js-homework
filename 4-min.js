@@ -13,11 +13,32 @@
  */
 
 // Your code here.
+
+// function for two arguments
+const min = (first, second) => {
+    return first > second ? second : first;
+}
+
+// function for two args (1st one can be an array)
+const minVer2 = (first, second) => {
+    let min;
+    if(Array.isArray(first)){
+        min = first[0];
+        first.forEach(e => {if(e < min) min = e});
+        if(second !== undefined && min > second) min = second;
+    } else if (second !== undefined) {
+        min = first > second ? second : first;
+    } else {
+        min = first;
+    }
+    return min;
+}
 //
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // → -10
+console.log(minVer2([2, 4, -4, 10, 0, -9, 17]))
 //
